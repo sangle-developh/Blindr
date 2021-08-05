@@ -8,6 +8,7 @@ function App() {
       <Header />
       <main>
         <Signup />
+        asdhfgj
       </main>
     </div>
   );
