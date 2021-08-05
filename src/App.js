@@ -8,6 +8,7 @@ function App() {
       <Header />
       <main>
         <Signup />
+        <p>hahaha</p>
       </main>
     </div>
   );
