@@ -32,9 +32,9 @@ export default () => (
             <a className="navbar-link">More</a>
 
             <div className="navbar-dropdown">
-              <a className="navbar-item">About</a>
-              <a className="navbar-item">Jobs</a>
               <a className="navbar-item">Contact</a>
+              <a className="navbar-item">Jobs</a>
+              <a className="navbar-item">About</a>
               <hr className="navbar-divider" />
               <a className="navbar-item">Report an issue</a>
             </div>
