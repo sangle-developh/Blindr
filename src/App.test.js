@@ -1,8 +1,9 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from 'react';
+import renderer from 'react-test-renderer';
+import { Signup } from './Components';
 
-test('renders Sign Up', () => {
-  render(<App />);
-  const signUpElement = screen.getByText('Sign up');
-  expect(signUpElement).toBeInTheDocument();
+test('Renders Sign up', () => {
+  const component = renderer.create(<Signup />);
+  const tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
 });
