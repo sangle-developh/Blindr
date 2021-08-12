@@ -1,0 +1,11 @@
+.form-style {
+    margin: 20px;
+}
+
+.form {
+    height: '300px';
+    width: '300px';
+    display: 'flex';  
+    justify-content: 'center'; 
+    align-items:'center'; 
+}
