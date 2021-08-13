@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Signup from './index';
 
-test('renders Header', () => {
+test('renders Signup', () => {
   render(<Signup />);
   const username = screen.getByText('Username');
   expect(username).toBeInTheDocument();

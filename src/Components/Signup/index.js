@@ -8,6 +8,7 @@ const Signup = () => {
     
     return (
         <div className = 'form'>
+            
             <div className="field">
                 <label className="label">
                     Username
