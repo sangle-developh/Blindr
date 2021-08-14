@@ -1,7 +1,170 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders Sign up 1`] = `
-<p>
-  Sign Up Page go here
-</p>
+<div
+  className="form"
+>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      Username
+    </label>
+    <div
+      className="control"
+    >
+      <input
+        className="input"
+        placeholder="Text input"
+        type="text"
+      />
+    </div>
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      D.O.B
+    </label>
+    <div
+      className="control"
+    >
+      <input
+        className="input"
+        placeholder="Text input"
+        type="text"
+      />
+    </div>
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      Gender
+    </label>
+    <div
+      className="control"
+    >
+      <div
+        className="select"
+      >
+        <select>
+          <option>
+            Male
+          </option>
+          <option>
+            Female
+          </option>
+          <option>
+            Other
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      Interest
+    </label>
+    <div
+      className="control"
+    >
+      <div
+        className="select"
+      >
+        <select>
+          <option>
+            Male
+          </option>
+          <option>
+            Female
+          </option>
+          <option>
+            Other
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      Max Distance
+    </label>
+    <div
+      className="control"
+    >
+      <input
+        className="slider is-fullwidth"
+        max="100"
+        min="0"
+        step="1"
+        type="range"
+        value="50"
+      />
+    </div>
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      Age Range
+    </label>
+    <div
+      className="control"
+    >
+      <input
+        className="slider is-fullwidth"
+        max="100"
+        min="0"
+        step="1"
+        type="range"
+        value="50"
+      />
+    </div>
+  </div>
+  <div
+    className="field"
+  >
+    <div
+      className="control"
+    >
+      <button
+        className="button is-link"
+        type="button"
+      >
+        CREATE ACCOUNT
+      </button>
+    </div>
+  </div>
+  <div
+    className="field"
+  >
+    <div
+      className="control"
+    >
+      <button
+        className="button is-link is-light"
+        type="button"
+      >
+        CANCEL
+      </button>
+    </div>
+  </div>
+</div>
 `;
