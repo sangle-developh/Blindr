@@ -12,4 +12,11 @@
   width: 80%;
   border-radius: 20px;
   margin: 64px;
+  display: flex;
+}
+
+.box-column {
+  flex: 1 1;
+  background-color: bisque;
+  border: 1px black solid;
 }
