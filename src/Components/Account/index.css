@@ -8,6 +8,8 @@
 }
 .wrapper-box {
   background-color: #e5e5e5;
-  flex: 1;
-  margin: 5rem;
+  height: 80%;
+  width: 80%;
+  border-radius: 20px;
+  margin: 64px;
 }
