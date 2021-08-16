@@ -15,7 +15,7 @@
     "prefer-promise-reject-errors": ["off"],
     "react/jsx-filename-extension": ["off"],
     "react/self-closing-comp": ["warn"],
-    "react/prop-types": ["warn"],
+    "react/prop-types": ["off"],
     "no-return-assign": ["off"],
     "arrow-body-style": ["off", "never"],
     "jsx-a11y/anchor-is-valid": ["off"],

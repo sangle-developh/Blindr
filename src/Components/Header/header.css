@@ -1,14 +1,55 @@
 .navbar {
-    padding: 5px 100px;
+  padding: 5px 100px;
+  background-color: #332f2f;
+}
+
+.button {
+  padding: 0px 30px;
+}
+
+.logo {
+  transform: scale(1.8);
+  margin: 0 20px 0 -20px;
+}
+
+.sign-in-btn {
+  width: 177px;
+  height: 31px;
+  border: solid 2px #a566d6;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #a566d6;
+  font-size: 18px;
+}
+
+.sign-in-btn:hover {
+  color: white;
+  border: solid 2px white;
+}
+
+.navbar-item {
+  margin: 0 10px 0 5px;
+  color: #a566d6;
+  font-size: 18px;
+}
+
+.navbar-burger {
+  color: white;
+}
+
+@media only screen and (max-width: 1022px) {
+  .navbar {
+    padding: 5px 5px;
   }
-  
-  .button {
-    padding: 0px 30px;
+
+  .sign-in-btn {
+    width: 80px;
+    height: 30px;
+    border: none;
+    margin-left: -15px;
   }
-  
-  @media only screen and (max-width: 600px) {
-    .navbar {
-      padding: 5px 5px;
-    }
+
+  .logo {
+    margin: 0 0 0 20px;
   }
-  
+}
