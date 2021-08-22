@@ -33,6 +33,10 @@
   font-size: 18px;
 }
 
+.navbar-burger {
+  color: white;
+}
+
 @media only screen and (max-width: 1022px) {
   .navbar {
     padding: 5px 5px;
