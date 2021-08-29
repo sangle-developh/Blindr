@@ -8,7 +8,7 @@ exports[`Renders Sign up 1`] = `
     className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-item MuiGrid-grid-xs-4"
   />
   <div
-    className="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-direction-xs-column MuiGrid-grid-xs-4"
+    className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-7 MuiGrid-item MuiGrid-direction-xs-column MuiGrid-grid-xs-4"
   >
     <img
       alt="Logo"
@@ -52,7 +52,7 @@ exports[`Renders Sign up 1`] = `
             />
             <fieldset
               aria-hidden={true}
-              className="PrivateNotchedOutline-root-2 MuiOutlinedInput-notchedOutline"
+              className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
               style={
                 Object {
                   "paddingLeft": 8,
@@ -60,7 +60,7 @@ exports[`Renders Sign up 1`] = `
               }
             >
               <legend
-                className="PrivateNotchedOutline-legend-3"
+                className="PrivateNotchedOutline-legend-2"
                 style={
                   Object {
                     "width": 0.01,
@@ -118,7 +118,7 @@ exports[`Renders Sign up 1`] = `
             />
             <fieldset
               aria-hidden={true}
-              className="PrivateNotchedOutline-root-2 MuiOutlinedInput-notchedOutline"
+              className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
               style={
                 Object {
                   "paddingLeft": 8,
@@ -126,7 +126,7 @@ exports[`Renders Sign up 1`] = `
               }
             >
               <legend
-                className="PrivateNotchedOutline-legend-3"
+                className="PrivateNotchedOutline-legend-2"
                 style={
                   Object {
                     "width": 0.01,
@@ -184,7 +184,7 @@ exports[`Renders Sign up 1`] = `
             />
             <fieldset
               aria-hidden={true}
-              className="PrivateNotchedOutline-root-2 MuiOutlinedInput-notchedOutline"
+              className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
               style={
                 Object {
                   "paddingLeft": 8,
@@ -192,7 +192,7 @@ exports[`Renders Sign up 1`] = `
               }
             >
               <legend
-                className="PrivateNotchedOutline-legend-3"
+                className="PrivateNotchedOutline-legend-2"
                 style={
                   Object {
                     "width": 0.01,
@@ -250,7 +250,7 @@ exports[`Renders Sign up 1`] = `
             />
             <fieldset
               aria-hidden={true}
-              className="PrivateNotchedOutline-root-2 MuiOutlinedInput-notchedOutline"
+              className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
               style={
                 Object {
                   "paddingLeft": 8,
@@ -258,7 +258,7 @@ exports[`Renders Sign up 1`] = `
               }
             >
               <legend
-                className="PrivateNotchedOutline-legend-3"
+                className="PrivateNotchedOutline-legend-2"
                 style={
                   Object {
                     "width": 0.01,
@@ -319,7 +319,7 @@ exports[`Renders Sign up 1`] = `
             aria-valuemax={100}
             aria-valuemin={0}
             aria-valuenow={NaN}
-            className="MuiSlider-thumb MuiSlider-thumbColorPrimary PrivateValueLabel-thumb-6"
+            className="MuiSlider-thumb MuiSlider-thumbColorPrimary PrivateValueLabel-thumb-5"
             data-index={0}
             onBlur={[Function]}
             onFocus={[Function]}
@@ -335,13 +335,13 @@ exports[`Renders Sign up 1`] = `
             tabIndex={0}
           >
             <span
-              className="PrivateValueLabel-offset-8 MuiSlider-valueLabel"
+              className="PrivateValueLabel-offset-7 MuiSlider-valueLabel"
             >
               <span
-                className="PrivateValueLabel-circle-9"
+                className="PrivateValueLabel-circle-8"
               >
                 <span
-                  className="PrivateValueLabel-label-10"
+                  className="PrivateValueLabel-label-9"
                 >
                   NaN
                 </span>
@@ -392,7 +392,7 @@ exports[`Renders Sign up 1`] = `
             aria-valuemax={100}
             aria-valuemin={0}
             aria-valuenow={NaN}
-            className="MuiSlider-thumb MuiSlider-thumbColorPrimary PrivateValueLabel-thumb-6"
+            className="MuiSlider-thumb MuiSlider-thumbColorPrimary PrivateValueLabel-thumb-5"
             data-index={0}
             onBlur={[Function]}
             onFocus={[Function]}
@@ -408,13 +408,13 @@ exports[`Renders Sign up 1`] = `
             tabIndex={0}
           >
             <span
-              className="PrivateValueLabel-offset-8 MuiSlider-valueLabel"
+              className="PrivateValueLabel-offset-7 MuiSlider-valueLabel"
             >
               <span
-                className="PrivateValueLabel-circle-9"
+                className="PrivateValueLabel-circle-8"
               >
                 <span
-                  className="PrivateValueLabel-label-10"
+                  className="PrivateValueLabel-label-9"
                 >
                   NaN
                 </span>
