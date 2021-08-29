@@ -16,11 +16,11 @@ import './index.css';
 function FormField(props) {
   const { label } = props;
   return (
-    <Grid container alignItems="center">
-      <Grid item xs={6} spacing={1}>
+    <Grid container alignItems="center" spacing={1}>
+      <Grid item xs={6}>
         <InputLabel htmlFor="label">{label}</InputLabel>
       </Grid>
-      <Grid item xs={6} spacing={1}>
+      <Grid item xs={6}>
         <TextField id="input" variant="outlined" size="small" fullWidth />
       </Grid>
     </Grid>
