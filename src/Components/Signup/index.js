@@ -2,7 +2,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import './index.css';
-import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Slider from '@material-ui/core/Slider';
 import Button from '@material-ui/core/Button';
@@ -13,21 +12,21 @@ import logo from '../Header/bindy-logo-white.png';
 
 import FormField from './FormField';
 
-const useStyles = makeStyles((theme) => ({
+/* const useStyles = makeStyles((theme) => ({
   root: {
     '& .MuiTextField-root': {
       margin: theme.spacing(1),
       width: '25ch',
     },
   },
-}));
+})); */
 
 const Signup = () => {
-  const classes = useStyles();
+  // const classes = useStyles();
   return (
     <Grid container spacing={1}>
-      <Grid container item xs={4} spacing={1}></Grid>
-      <Grid container item xs={4} direction="column" spacing={24}>
+      <Grid container item xs={4} spacing={1} />
+      <Grid container item xs={4} direction="column" spacing={7}>
         <img src={logo} alt="Logo" />
         <FormField label="Username" />
         <FormField label="Date of Birth" />
@@ -54,7 +53,7 @@ const Signup = () => {
           <Button variant="outlined">CANCEL</Button>
         </Grid>
       </Grid>
-      <Grid container item xs={4} spacing={1}></Grid>
+      <Grid container item xs={4} spacing={1} />
     </Grid>
   );
 };

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './index.css';
 
-const Signup = () => {
-  const [value, setValue] = useState(50);
+const Account = () => {
+  // const [value, setValue] = useState(50);
   return (
     <div className="account-page">
       <div className="wrapper-box">
@@ -13,4 +13,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Account;
