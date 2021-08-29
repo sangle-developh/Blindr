@@ -1,17 +1,31 @@
 import React, { useState } from 'react';
-import { Form } from 'react-bulma-components';
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import InputLabel from '@material-ui/core/InputLabel';
+import TextField from '@material-ui/core/TextField';
+import './index.css';
 
-export default ({ label }) => {
-  const [state, setState] = useState('');
+const useStyles = makeStyles((theme) => ({
+  root: {
+    '& .MuiTextField-root': {
+      margin: theme.spacing(1),
+      width: '25ch',
+    },
+  },
+}));
 
+function FormField(props) {
+  const { label, select } = props;
   return (
-    <div>
-      <div className="form-style">
-        <Form.Label>{label}</Form.Label>
-        <Form.Control>
-          <Form.Input type="text" value={state} onChange={(e) => setState(e.target.value)} />
-        </Form.Control>
-      </div>
-    </div>
+    <Grid container alignItems="center">
+      <Grid item xs={6} spacing={1}>
+        <InputLabel htmlFor="label">{label}</InputLabel>
+      </Grid>
+      <Grid item xs={6} spacing={1}>
+        <TextField id="input" variant="outlined" size="small" fullWidth />
+      </Grid>
+    </Grid>
   );
-};
+}
+
+export default FormField;

@@ -1,87 +1,62 @@
 /* eslint-disable max-len */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import 'bulma/css/bulma.min.css';
 import './index.css';
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Slider from '@material-ui/core/Slider';
+import Button from '@material-ui/core/Button';
+
+import { InputLabel } from '@material-ui/core';
+
+import logo from '../Header/bindy-logo-white.png';
+
+import FormField from './FormField';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    '& .MuiTextField-root': {
+      margin: theme.spacing(1),
+      width: '25ch',
+    },
+  },
+}));
 
 const Signup = () => {
-    
-    return (
-        <div className = 'form'>
-            
-            <div className="field">
-                <label className="label">
-                    Username
-                </label>
-                <div className="control">
-                    <input className="input" type="text" placeholder="Text input"/>
-                </div>
-            </div>
-
-            <div className="field">
-                <label className="label">
-                    D.O.B
-                </label>
-                <div className="control">
-                    <input className="input" type="text" placeholder="Text input"/>
-                </div>
-            </div>
-
-            <div className="field">
-                <label className="label">Gender</label>
-                <div className="control">
-                    <div className="select">
-                    <select>
-                        <option>Male</option>
-                        <option>Female</option>
-                        <option>Other</option>
-                    </select>
-                    </div>
-                </div>
-            </div>
-
-            <div className="field">
-                <label className="label">Interest</label>
-                <div className="control">
-                    <div className="select">
-                    <select>
-                        <option>Male</option>
-                        <option>Female</option>
-                        <option>Other</option>
-                    </select>
-                    </div> 
-                </div>
-            </div>
-
-            <div className="field">
-                <label className="label">Max Distance</label>
-                <div className="control">
-                    <input className="slider is-fullwidth" step="1" min="0" max="100" value="50" type="range"/>
-                </div>
-            </div>
-
-            <div className="field">
-                <label className="label">Age Range</label>
-                <div className="control">
-                    <input className="slider is-fullwidth" step="1" min="0" max="100" value="50" type="range"/>
-                </div>
-            </div>
-
-            <div className="field">
-                <div className="control">
-                    <button type="button" className="button is-link">CREATE ACCOUNT</button>
-                </div>
-            </div>
-
-            <div className="field">
-                <div className="control">
-                    <button type = "button" className="button is-link is-light">CANCEL</button>
-                </div>
-            </div>
-            
-        </div>
-       
-    )
-}
+  const classes = useStyles();
+  return (
+    <Grid container spacing={1}>
+      <Grid container item xs={4} spacing={1}></Grid>
+      <Grid container item xs={4} direction="column" spacing={24}>
+        <img src={logo} alt="Logo" />
+        <FormField label="Username" />
+        <FormField label="Date of Birth" />
+        <FormField label="Gender" />
+        <FormField label="Interest" />
+        <Grid container alignItems="center">
+          <Grid item xs={6} spacing={1}>
+            <InputLabel>Age Range</InputLabel>
+          </Grid>
+          <Grid item xs={6} spacing={1}>
+            <Slider valueLabelDisplay="auto" aria-labelledby="range-slider" />
+          </Grid>
+        </Grid>
+        <Grid container alignItems="center">
+          <Grid item xs={6} spacing={1}>
+            <InputLabel>Max Distance</InputLabel>
+          </Grid>
+          <Grid item xs={6} spacing={1}>
+            <Slider valueLabelDisplay="auto" aria-labelledby="range-slider" />
+          </Grid>
+        </Grid>
+        <Grid container alignItems="center">
+          <Button>CREATE ACCOUNT</Button>
+          <Button variant="outlined">CANCEL</Button>
+        </Grid>
+      </Grid>
+      <Grid container item xs={4} spacing={1}></Grid>
+    </Grid>
+  );
+};
 
 export default Signup;
