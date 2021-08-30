@@ -20,3 +20,69 @@
   background-color: bisque;
   border: 1px black solid;
 }
+
+.form-field {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 3rem 3.5rem 2rem 3.5rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 3rem 3.5rem 2rem 3.5rem;
+}
+
+.formControl {
+  width: 195px;
+  height: 32px;
+}
+
+.sex-orientation-input {
+  width: 374px;
+}
+
+.sex-orientation-field {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+.pronouns-input {
+  width: 195px;
+  height: 32px;
+  background-color: transparent;
+  border: 1px solid;
+  color: black;
+  font-size: 18px;
+  padding: 0.2rem 0.7rem 0.2rem 0.7rem;
+}
+
+.selection {
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 15px;
+  color: black;
+  font-size: 18px;
+  padding: 0.2rem 0.7rem 0.2rem 0.7rem;
+}
+
+.connect-btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.connect-btn {
+  width: 374px;
+  height: 51px;
+  background-color: transparent;
+  border: 2px solid;
+  font-size: 22px;
+  margin: 5px;
+}
