@@ -7,7 +7,7 @@ test('renders Signup', () => {
   const username = screen.getByText('Username');
   expect(username).toBeInTheDocument();
 
-  const dateOfBirth = screen.getByText('D.O.B');
+  const dateOfBirth = screen.getByText('Date of Birth');
   expect(dateOfBirth).toBeInTheDocument();
 
   const gender = screen.getByText('Gender');
@@ -22,9 +22,9 @@ test('renders Signup', () => {
   const ageRange = screen.getByText('Age Range');
   expect(ageRange).toBeInTheDocument();
 
-  const createAccount = screen.getByText('CREATE ACCOUNT');
+const createAccount = screen.getByText('CREATE ACCOUNT');
   expect(createAccount).toBeInTheDocument();
 
   const cancel = screen.getByText('CANCEL');
-  expect(cancel).toBeInTheDocument();
+  expect(cancel).toBeInTheDocument(); 
 });
