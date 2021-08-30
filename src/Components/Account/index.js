@@ -39,7 +39,7 @@ const Signup = () => {
     <div className="account-page">
       <div className="wrapper-box">
         <div className="box-column">left</div>
-        <div className="box-column">
+        <div className="box-column right-box">
           <div className="form-field">
             <h3>Pronouns</h3>
             <TextField
