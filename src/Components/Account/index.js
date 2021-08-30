@@ -8,8 +8,23 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import NativeSelect from '@material-ui/core/NativeSelect';
 import TextField from '@material-ui/core/TextField';
+import { makeStyles } from '@material-ui/styles';
+
+// const useStyles = makeStyles({
+//   pronouns: {
+//     width: 195,
+//     height: 32,
+//     backgroundColor: 'transparent',
+//     border: 1,
+//     color: 'black',
+//     // font-size: 18,
+//     // padding: 0.2rem 0.7rem 0.2rem 0.7rem,
+//   },
+// });
 
 const Signup = () => {
+  // const classes = useStyles();
+
   const sexualOrientaions = [
     'Straight',
     'Lesbian',
@@ -43,11 +58,15 @@ const Signup = () => {
           <div className="form-field">
             <h3>Pronouns</h3>
             <TextField
-              InputProps={{
-                className: 'pronouns-input',
-              }}
+              variant="outlined"
+              // InputProps={{
+              //   className: 'pronouns-input',
+              // }}
+              className="pronouns-input"
+              // className={classes.pronouns}
             />
           </div>
+
           <div className="form-field">
             <h3>Gender</h3>
             <FormControl className="formControl">

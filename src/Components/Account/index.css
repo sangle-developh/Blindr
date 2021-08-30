@@ -58,6 +58,11 @@ h3 {
   color: black;
   font-size: 18px;
   padding: 0.2rem 0.7rem 0.2rem 0.7rem;
+  border-radius: 15px;
+}
+
+.pronouns-input .MuiOutlinedInput-root {
+  border-radius: 15px;
 }
 
 .selection {
