@@ -19,4 +19,13 @@
   flex: 1 1;
   background-color: bisque;
   border: 1px black solid;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+}
+
+.field {
+  flex-direction: column;
+  flex: 1 1;
 }
