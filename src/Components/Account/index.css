@@ -49,20 +49,22 @@
 h3 {
   font-size: 22px;
 }
-
+/* 
 .pronouns-input {
   width: 195px;
   height: 32px;
   background-color: transparent;
   border: 1px solid;
+  border-color: 'red';
   color: black;
   font-size: 18px;
   padding: 0.2rem 0.7rem 0.2rem 0.7rem;
   border-radius: 15px;
-}
+} */
 
 .pronouns-input .MuiOutlinedInput-root {
   border-radius: 15px;
+  height: 40px;
 }
 
 .selection {
