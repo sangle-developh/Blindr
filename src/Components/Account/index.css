@@ -21,73 +21,19 @@
   border: 1px black solid;
 }
 
-.form-field {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 3rem 100px 2rem 100px;
-}
-
-.form-field > h3 {
-  font-size: 22px;
-}
-
-.formControl {
-  width: 195px;
-  height: 32px;
-}
-
-.sex-orientation-input {
-  width: 100%;
-}
-
-.sex-orientation-field {
-  flex-direction: column;
-  align-items: flex-start;
-}
-
 h3 {
   font-size: 22px;
 }
-/* 
-.pronouns-input {
-  width: 195px;
-  height: 32px;
-  background-color: transparent;
-  border: 1px solid;
-  border-color: 'red';
-  color: black;
-  font-size: 18px;
-  padding: 0.2rem 0.7rem 0.2rem 0.7rem;
-  border-radius: 15px;
-} */
+
+.pronouns-input .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-width: '1px';
+
+  border-color: 'black';
+}
 
 .pronouns-input .MuiOutlinedInput-root {
+  border-width: '1px';
+  /* border-color: black; */
   border-radius: 15px;
   height: 40px;
-}
-
-.selection {
-  background-color: transparent;
-  border: 1px solid;
-  border-radius: 15px;
-  color: black;
-  font-size: 18px;
-  padding: 0.2rem 0.7rem 0.2rem 0.7rem;
-}
-
-.connect-btn-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 3rem;
-}
-
-.connect-btn {
-  width: 374px;
-  height: 51px;
-  background-color: transparent;
-  border: 2px solid;
-  font-size: 22px;
-  margin: 5px;
 }
