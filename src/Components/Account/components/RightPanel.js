@@ -55,13 +55,17 @@ const useStyles = makeStyles({
     fontSize: '22px',
     margin: '5px',
   },
+
   pronounsInput: {
     [`& fieldset`]: {
+      border: '1px solid black',
+      fontSize: '18px',
       borderRadius: '15px',
-      borderWidth: '1px',
-      borderColor: 'black',
-      height: '47px',
+      backgroundColor: 'transparent',
     },
+  },
+  input: {
+    padding: '0px',
   },
 });
 
@@ -93,9 +97,12 @@ const RightPanel = () => {
       <div className={classes.formField}>
         <h3>Pronouns</h3>
         <TextField
-          variant="outlined"
+          // variant="outlined"
           className={classes.pronounsInput}
           onChange={(e) => setPronouns(e.target.value)}
+          inputProps={{
+            style: { padding: '3.2px 11.2px', height: 33, width: 170 },
+          }}
         />
       </div>
 
