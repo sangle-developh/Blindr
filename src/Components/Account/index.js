@@ -1,13 +1,13 @@
 import React from 'react';
 import './index.css';
+import RightPanel from './components/RightPanel';
 
 const Account = () => {
-  // const [value, setValue] = useState(50);
   return (
     <div className="account-page">
       <div className="wrapper-box">
         <div className="box-column">left</div>
-        <div className="box-column">right</div>
+        <RightPanel />
       </div>
     </div>
   );

@@ -20,3 +20,20 @@
   background-color: bisque;
   border: 1px black solid;
 }
+
+h3 {
+  font-size: 22px;
+}
+
+.pronouns-input .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-width: '1px';
+
+  border-color: 'black';
+}
+
+.pronouns-input .MuiOutlinedInput-root {
+  border-width: '1px';
+  /* border-color: black; */
+  border-radius: 15px;
+  height: 40px;
+}
