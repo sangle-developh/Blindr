@@ -15,8 +15,12 @@ exports[`Renders Sign up 1`] = `
       >
         <img
           alt="Logo"
-          className="makeStyles-logo-1"
           src="bindy-logo-cropped.png"
+          style={
+            Object {
+              "width": "35%",
+            }
+          }
         />
       </div>
       <div
@@ -584,7 +588,7 @@ exports[`Renders Sign up 1`] = `
           className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1em9ut6-MuiGrid-root"
         >
           <button
-            className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButtonBase-root makeStyles-createAccountButton-4 css-1fu7jd5-MuiButtonBase-root-MuiButton-root"
+            className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButtonBase-root css-1fu7jd5-MuiButtonBase-root-MuiButton-root"
             disabled={false}
             onBlur={[Function]}
             onContextMenu={[Function]}
@@ -598,6 +602,12 @@ exports[`Renders Sign up 1`] = `
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
             onTouchStart={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#332F2F",
+                "color": "#E6A698",
+              }
+            }
             tabIndex={0}
             type="submit"
           >
@@ -608,7 +618,7 @@ exports[`Renders Sign up 1`] = `
           className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1em9ut6-MuiGrid-root"
         >
           <button
-            className="MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-fullWidth MuiButtonBase-root makeStyles-cancelButton-5 css-xsqe0f-MuiButtonBase-root-MuiButton-root"
+            className="MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-fullWidth MuiButtonBase-root css-xsqe0f-MuiButtonBase-root-MuiButton-root"
             disabled={false}
             onBlur={[Function]}
             onContextMenu={[Function]}
@@ -622,6 +632,12 @@ exports[`Renders Sign up 1`] = `
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
             onTouchStart={[Function]}
+            style={
+              Object {
+                "border": "1px solid #332F2F",
+                "color": "#332F2F",
+              }
+            }
             tabIndex={0}
             type="button"
           >
