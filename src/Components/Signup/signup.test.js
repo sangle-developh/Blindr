@@ -7,7 +7,7 @@ test('renders Signup', () => {
   const username = screen.getByText('Username');
   expect(username).toBeInTheDocument();
 
-  const dateOfBirth = screen.getByText('Date of Birth');
+  const dateOfBirth = screen.getByText('D.O.B');
   expect(dateOfBirth).toBeInTheDocument();
 
   const gender = screen.getByText('Gender');
