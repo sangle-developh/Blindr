@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/styles';
-import { InputLabel, Grid, Chip, TextField } from '@material-ui/core/';
+import { Grid, Chip, TextField } from '@material-ui/core/';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   paperRoot: {
     background: '#e5e5e5',
     display: 'flex',
