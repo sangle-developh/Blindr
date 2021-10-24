@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from './bindy-logo-white.png';
 
 function HeaderBrand({ setMenuState, menuActive }) {
@@ -8,9 +9,9 @@ function HeaderBrand({ setMenuState, menuActive }) {
 
   return (
     <div className="navbar-brand">
-      <a className="navbar-item" href="/">
+      <Link to="" className="navbar-item">
         <img src={logo} alt="Logo" className="logo" />
-      </a>
+      </Link>
 
       <a
         role="button"

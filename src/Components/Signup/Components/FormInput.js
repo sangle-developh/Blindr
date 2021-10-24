@@ -29,25 +29,6 @@ const useStyles = makeStyles({
       border: '0.5px solid #332F2F',
     },
   },
-  createAccountButton: {
-    color: '#E6A698',
-    backgroundColor: '#332F2F',
-    '&:hover': {
-      color: '#332F2F',
-      backgroundColor: 'white',
-      border: '1px solid #332F2F',
-      boxShadow: 'none',
-    },
-  },
-  cancelButton: {
-    color: '#332F2F',
-    border: '1px solid #332F2F',
-    '&:hover': {
-      backgroundColor: 'white',
-      border: '1px solid #332F2F',
-      boxShadow: 'none',
-    },
-  },
 });
 
 const CustomSlider = withStyles({
@@ -65,36 +46,44 @@ const CustomSlider = withStyles({
 
 const defaultValues = {
   username: '',
-  dateOfBirth: undefined,
+  name: '',
+  dob: undefined,
   gender: '',
   interest: '',
-  minAge: 0,
-  maxAge: 10,
+  ageRange: '1835',
   maxDistance: 0,
 };
 
-const FormInput = () => {
+const FormInput = ({ formVal }) => {
   const classes = useStyles();
+  const minAge = parseInt(defaultValues.ageRange.substring(0,2), 10);
+  const maxAge = parseInt(defaultValues.ageRange.substring(2), 10);
   const [formValues, setFormValues] = useState(defaultValues);
+  const [distanceValue, setDistanceValue] = useState(defaultValues.maxDistance);
+  const [ageRangeValue, setAgeRangeValue] = useState([minAge, maxAge]);
+  const handleAgeRangeChange = (event, newValue) => {
+    setAgeRangeValue(newValue);
+    setFormValues({
+      ...formValues,
+      ageRange: newValue[0].toString() + newValue[1].toString()
+    });
+    formVal(formValues);
+  };
+  const handleDistanceChange = (event, newValue) => {
+    setDistanceValue(newValue);
+    setFormValues({
+      ...formValues,
+      maxDistance: newValue,
+    });
+    formVal(formValues);
+  };
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormValues({
       ...formValues,
       [name]: value,
     });
-  };
-  const handleSelectChange = (e) => {
-    const { name, value } = e.target;
-    setFormValues({
-      ...formValues,
-      [name]: value,
-    });
-  };
-  const handleSliderChange = (name) => (e, value) => {
-    setFormValues({
-      ...formValues,
-      [name]: value,
-    });
+    formVal(formValues);
   };
   return (
     <>
@@ -111,6 +100,23 @@ const FormInput = () => {
           fullWidth
           autoComplete="off"
           value={formValues.username}
+          onChange={handleInputChange}
+          className={classes.input}
+        />
+      </Grid>
+      <Grid item xs={12} sm={4}>
+        <InputLabel htmlFor="label">Name</InputLabel>
+      </Grid>
+      <Grid item xs={12} sm={8}>
+        <TextField
+          id="name-input"
+          name="name"
+          variant="outlined"
+          type="text"
+          size="small"
+          fullWidth
+          autoComplete="off"
+          value={formValues.name}
           onChange={handleInputChange}
           className={classes.input}
         />
@@ -142,7 +148,7 @@ const FormInput = () => {
             size="small"
             fullWidth
             value={formValues.gender}
-            onChange={handleSelectChange}
+            onChange={handleInputChange}
             className={classes.select}
           >
             <MenuItem key="man" value="man">
@@ -168,7 +174,7 @@ const FormInput = () => {
             size="small"
             fullWidth
             value={formValues.interest}
-            onChange={handleSelectChange}
+            onChange={handleInputChange}
             className={classes.select}
           >
             <MenuItem key="men" value="men">
@@ -189,8 +195,8 @@ const FormInput = () => {
       </Grid>
       <Grid item xs={12}>
         <CustomSlider
-          value={[0, formValues.maxDistance]}
-          onChange={handleSliderChange('maxDistance')}
+          value={distanceValue}
+          onChange={handleDistanceChange}
           valueLabelDisplay="auto"
           aria-labelledby="range-slider"
           className={classes.slider}
@@ -201,8 +207,8 @@ const FormInput = () => {
       </Grid>
       <Grid item xs={12}>
         <CustomSlider
-          value={[formValues.minAge, formValues.maxAge]}
-          onChange={handleSliderChange}
+          value={ageRangeValue}
+          onChange={handleAgeRangeChange}
           valueLabelDisplay="auto"
           aria-labelledby="range-slider"
           className={classes.slider}
