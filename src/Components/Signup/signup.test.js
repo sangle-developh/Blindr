@@ -6,6 +6,9 @@ test('renders Signup', () => {
   render(<Signup />);
   const username = screen.getByText('Username');
   expect(username).toBeInTheDocument();
+  
+  const username = screen.getByText('Name');
+  expect(username).toBeInTheDocument();
 
   const dateOfBirth = screen.getByText('D.O.B');
   expect(dateOfBirth).toBeInTheDocument();
