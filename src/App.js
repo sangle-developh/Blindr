@@ -6,12 +6,12 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <div className="header">
-        <Header />
-      </div>
-      <main className="main">
-        <Router>
+    <Router>
+      <div className="App">
+        <div className="header">
+          <Header />
+        </div>
+        <main className="main">
           <Switch>
             <Route path="/signup">
               <Signup />
@@ -23,9 +23,9 @@ function App() {
               <Home />
             </Route>
           </Switch>
-        </Router>
-      </main>
-    </div>
+        </main>
+      </div>
+    </Router>
   );
 }
 
