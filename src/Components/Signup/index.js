@@ -17,10 +17,14 @@ const Signup = () => {
     console.log(formData);
     const requestOptions = {
       method: 'POST',
+      mode: 'cors', // no-cors, *cors, same-origin
+      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
+      body: JSON.stringify({ username: 'aaa', name: 'bbb', dob: '1/2/1997' }),
     };
-    fetch('http://localhost:5000/user', requestOptions).then((response) => response.json());
+    fetch('http://localhost:5000/user', requestOptions).then((response) =>
+      console.log(response.json()),
+    );
   };
   return (
     <form onSubmit={handleSubmit}>
