@@ -1,70 +1,125 @@
-<<<<<<< HEAD
-import React from 'react';
-import './index.css';
-
-const Account = () => {
-  // const [value, setValue] = useState(50);
-=======
 import React, { useState } from 'react';
-import 'bulma/css/bulma.min.css';
+import { makeStyles } from '@material-ui/styles';
+import Grid from '@material-ui/core/Grid';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Switch from '@material-ui/core/Switch';
+import TextField from '@material-ui/core/TextField';
 import './index.css';
+import RightPanel from './components/RightPanel';
+import MultilineTextFields from './menu';
 
-const Account = () => {
-  const [state, setState] = useState([{status : false}]);
+const useStyles = makeStyles({
+  gridItem: {
+    width: '100%',
+  },
+  leftColumnRoot: {
+    direction: 'column',
+    alignItems: 'flex-start',
+    gap: '10px',
+    padding: '45px 100px',
+  },
+  input: {
+    fontSize: '30px',
+  },
+});
 
->>>>>>> 296146f953b4c2c6730e4ab9b6dd7b54ae8308c7
+export default (props) => {
+  const classes = useStyles(props);
+
+  const [state, setState] = useState({
+    checkedA: true,
+    checkedB: true,
+  });
+  const [bio, setBio] = useState('');
+  const [workplace, setWorkplace] = useState('');
+
+  const switchHandleChange = (event) => {
+    setState({ ...state, [event.target.name]: event.target.checked });
+  };
+
+  const bioHandleChange = (event) => {
+    setBio(event.target.value);
+  };
+
+  const workplaceHandleChange = (event) => {
+    setWorkplace(event.target.value);
+  };
+
   return (
     <div className="account-page">
       <div className="wrapper-box">
-        <div className="box-column">
-          <div className="field">
-            <input 
-              id="switchRoundedDefault" 
-              type="checkbox"
-              name="switchRoundedDefault" 
-              className="switch is-rounded" 
-              checked= {state.status} 
-              onChange={(e) => setState({ ...state, [e.target.name]: e.target.checked })}/>
-            <label htmlFor="switchRoundedDefault">Show my Bindy profile</label>
-          </div>
-
-          <div className="field">
-            <label className="label">Message</label>
-            <div className="control">
-              <textarea className="textarea" placeholder="Placeholder for bio" />
-            </div>
-          </div>
-
-          <div className="field">
-            <label className="label">
-                School/Company
-            </label>
-            <div className="control">
-                <input 
-                  className="input" 
-                  type="text" 
-                  placeholder="Placeholder for school/company name"/>
-            </div>
-          </div>
-
-          <div className="field">
-            <label className="label">Interest</label>
-            <div className="control">
-                <div className="select">
-                <select>
-                    <option>Photography</option>
-                    <option>Cooking</option>
-                    <option>Movies</option>
-                </select>
-                </div>
-            </div>
-          </div>
+        <div className="left-column">
+          <Grid container className={classes.leftColumnRoot}>
+            <Grid item>
+              <FormControlLabel
+                control={
+                  <Switch
+                    checked={state.checkedB}
+                    onChange={switchHandleChange}
+                    name="checkedB"
+                    color="primary"
+                  />
+                }
+                sx={{
+                  '& .MuiFormControlLabel-label': {
+                    fontSize: '22px',
+                  },
+                }}
+                label="Show my Bindy profile"
+              />
+            </Grid>
+            <Grid item className={classes.gridItem}>
+              <Grid container direction="column" alignItems="flex-start">
+                <h3>About me</h3>
+                <TextField
+                  className={classes.gridItem}
+                  id="outlined-multiline-static"
+                  multiline
+                  rows={4}
+                  defaultValue="Default Value"
+                  variant="outlined"
+                  value={bio}
+                  onChange={bioHandleChange}
+                  sx={{
+                    '& .css-dpjnhs-MuiInputBase-root-MuiOutlinedInput-root': {
+                      border: '1px solid black',
+                      fontSize: '18px',
+                      borderRadius: '15px',
+                      backgroundColor: 'transparent',
+                    },
+                  }}
+                />
+              </Grid>
+            </Grid>
+            <Grid item className={classes.gridItem}>
+              <Grid container direction="column" alignItems="flex-start">
+                <h3>School/Company</h3>
+                <TextField
+                  className={classes.gridItem}
+                  id="outlined-multiline-flexible"
+                  multiline
+                  maxRows={4}
+                  value={workplace}
+                  onChange={workplaceHandleChange}
+                  variant="outlined"
+                  sx={{
+                    '& .css-dpjnhs-MuiInputBase-root-MuiOutlinedInput-root': {
+                      border: '1px solid black',
+                      fontSize: '18px',
+                      borderRadius: '15px',
+                      backgroundColor: 'transparent',
+                    },
+                  }}
+                />
+              </Grid>
+            </Grid>
+            <Grid item>
+              <MultilineTextFields />
+            </Grid>
+          </Grid>
         </div>
-
-        <div className="box-column">right</div>
+        <RightPanel />
       </div>
     </div>
   );
 };
-
-export default Account;
