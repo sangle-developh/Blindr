@@ -98,6 +98,7 @@ const RightPanel = () => {
         <h3>Pronouns</h3>
         <TextField
           // variant="outlined"
+          value={pronouns}
           className={classes.pronounsInput}
           onChange={(e) => setPronouns(e.target.value)}
           inputProps={{
