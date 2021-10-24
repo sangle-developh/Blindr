@@ -15,12 +15,23 @@
   display: flex;
 }
 
-.box-column {
+.left-column {
   flex: 1 1;
-  background-color: bisque;
-  border: 1px black solid;
+  background-color: 'white';
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
+.right-column {
+  flex: 1 1;
+  background-color: 'white';
+}
+
+.field {
+  flex-direction: column;
+  flex: 1 1;
+}
 h3 {
   font-size: 22px;
 }

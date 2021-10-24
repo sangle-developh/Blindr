@@ -19,7 +19,7 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    margin: '3rem 100px 2rem 100px',
+    margin: '2rem 100px 1rem 100px',
   },
 
   formControl: {
@@ -93,7 +93,7 @@ const RightPanel = () => {
   const [city, setCity] = useState('');
 
   return (
-    <div className="box-column right-box">
+    <div className="right-column right-box">
       <div className={classes.formField}>
         <h3>Pronouns</h3>
         <TextField
